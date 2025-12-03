@@ -1,0 +1,15 @@
+<nav class="flex justify-around items-center">
+  <p>Rider</p>
+  <ul class="flex gap-6">
+    @for(nav of NAVBAR; track nav) {
+    <li>
+      <a [routerLink]="nav.route">{{ nav.label }}</a>
+    </li>
+    }
+  </ul>
+  <img
+    src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o="
+    alt=""
+    class="w-[50px] h-[50px]"
+  />
+</nav>
