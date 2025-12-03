@@ -2,7 +2,7 @@
   <p class="font-urbanist text-[32px] font-bold ">Rider</p>
   <ul class="flex gap-6 text-base">
     @for(nav of NAVBAR; track nav) {
-    <li>
+    <li class="font-urbanist">
       <a [routerLink]="nav.route">{{ nav.label }}</a>
     </li>
     }

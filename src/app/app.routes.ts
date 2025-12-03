@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import { LandingPage } from './modules/landing-page/landing-page';
+import { InsureHealthDetails } from './modules/insure-health-details/insure-health-details';
 
 export const routes: Routes = [
     {
-     path: 'landing', component: LandingPage ,
+
     }
 ];
