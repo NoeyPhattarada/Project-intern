@@ -3,6 +3,6 @@ import { InsureHealthDetails } from './modules/insure-health-details/insure-heal
 
 export const routes: Routes = [
     {
-
+        path: "insure-health-details", component: InsureHealthDetails
     }
 ];
