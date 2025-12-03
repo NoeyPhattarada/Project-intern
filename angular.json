@@ -22,9 +22,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+                
+              },
+              "src/assets"
             ],
-            "styles": [
+              "styles": [
               "src/styles.css"
             ]
           },
