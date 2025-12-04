@@ -1,0 +1,38 @@
+<div class="m-auto">
+    <table class="table-auto w-7xl h-[440px] border border-[#EAEFF5]">
+        <thead>
+            <tr>
+                <td class="font-kanit font-medium text-base text-[#111315]">ข้อตกลงคุ้มครองประกันภัยอุบัติเหตุส่วนบุคคล</td>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td colspan="4" class="bg-[#F2F4FF]">
+                        <ul class="list-disc list-inside">
+                            @for(cov of Coverage; track cov) {
+                                <li class="font-kanit font-light text-base py-2 px-0 text-[#1B2437]">
+                                    {{ cov.detail }}
+                                </li>
+                            }
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="font-kanit font-light text-base flex gap-2.5 text-[#1B2437]">
+                        5. ผลประโยชน์เพิ่มเติม ค่ารักษาพยาบาล สำหรับการเข้ารักษาในโรงพยาบาล อันเนื่องมาจากอุบัติเหตุ
+                    </td>
+                </tr>
+                @for(details of DetailsRow; track details) {
+                    <tr class="bg-[#F2F4FF]">
+                        <ul class="list-disc list-inside">
+                            <li class="font-kanit font-light text-base text-[#1B2437]">{{ details.title }}</li>
+                        </ul>
+                    </tr>
+                    <tr>
+                        <td>{{ details.plan }}</td>
+                        <td>{{ details.plan }}</td>
+                    </tr>
+                }
+        </tbody>
+    </table>
+</div>
