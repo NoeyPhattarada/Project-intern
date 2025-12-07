@@ -1,5 +1,5 @@
 <div class="m-auto">
-    <table class="table-auto w-7xl h-[440px] border border-[#EAEFF5]">
+    <table class="table-auto w-full h-[440px] border border-[#EAEFF5] rounded-2xl">
         <thead>
             <tr>
                 <td class="font-kanit font-medium text-base text-[#111315]">ข้อตกลงคุ้มครองประกันภัยอุบัติเหตุส่วนบุคคล</td>
@@ -7,7 +7,7 @@
         </thead>
         <tbody>
                 <tr>
-                    <td colspan="4" class="bg-[#F2F4FF]">
+                    <td colspan="5" class="bg-[#F2F4FF]">
                         <ul class="list-disc list-inside">
                             @for(cov of Coverage; track cov) {
                                 <li class="font-kanit font-light text-base py-2 px-0 text-[#1B2437]">
@@ -30,6 +30,8 @@
                     </tr>
                     <tr>
                         <td>{{ details.plan }}</td>
+                    </tr>
+                    <tr>
                         <td>{{ details.plan }}</td>
                     </tr>
                 }
