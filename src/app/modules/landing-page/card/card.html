@@ -7,9 +7,9 @@
     @for (card of CARD; track card) {
     <div class="flex-col ml-10">
       <img [src]="card.image" alt="" class="mb-8 w-[302px] h-[298px] rounded-[20px]" />
-      <h3 class="font-kanit text-sm font-normal">{{ card.title }}</h3>
+      <h3 class="font-kanit text-xl font-normal">{{ card.title }}</h3>
       <div class="flex">
-        @for (star of CARD; track star) {
+        @for (star of [1,2,3,4,5]; track $index) {
         <svg
           class="w-6 h-6 text-yellow-400 fill-current mr-1"
           viewBox="0 0 20 20"
@@ -20,12 +20,17 @@
           />
         </svg>
         }
-        <span class="font-kanit text-xl font-normal">{{ card.rating }}</span>
+        <span class="font-kanit text-sm mt-1 font-normal">{{ card.rating }}</span>
       </div>
 
       <h3 class="font-kanit text-2xl font-normal">{{ card.price }}{{ card.unit }}</h3>
     </div>
 
     }
+  </div>
+  <div
+    class="border-[#0000001A] font-urbanist w-fit mx-auto px-[54px] py-4 mt-10 text-center border rounded-[62px]"
+  >
+    <button>View All</button>
   </div>
 </div>
