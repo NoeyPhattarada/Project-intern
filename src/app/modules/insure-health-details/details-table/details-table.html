@@ -1,13 +1,14 @@
-<div class="m-auto">
+<div>
     <table class="table-auto w-full h-[440px] border border-[#EAEFF5] rounded-2xl">
         <thead>
             <tr>
                 <td class="font-kanit font-medium text-base text-[#111315]">ข้อตกลงคุ้มครองประกันภัยอุบัติเหตุส่วนบุคคล</td>
             </tr>
         </thead>
+
         <tbody>
                 <tr>
-                    <td colspan="5" class="bg-[#F2F4FF]">
+                    <td colspan="4" class="bg-[#F2F4FF]">
                         <ul class="list-disc list-inside">
                             @for(cov of Coverage; track cov) {
                                 <li class="font-kanit font-light text-base py-2 px-0 text-[#1B2437]">
@@ -17,22 +18,33 @@
                         </ul>
                     </td>
                 </tr>
+
                 <tr>
                     <td class="font-kanit font-light text-base flex gap-2.5 text-[#1B2437]">
                         5. ผลประโยชน์เพิ่มเติม ค่ารักษาพยาบาล สำหรับการเข้ารักษาในโรงพยาบาล อันเนื่องมาจากอุบัติเหตุ
                     </td>
                 </tr>
+
                 @for(details of DetailsRow; track details) {
                     <tr class="bg-[#F2F4FF]">
-                        <ul class="list-disc list-inside">
-                            <li class="font-kanit font-light text-base text-[#1B2437]">{{ details.title }}</li>
-                        </ul>
+                        <td class="font-kanit font-light text-base text-[#1B2437] w-full h-6">
+                            <ul class="list-disc list-inside">
+                                <li>{{ details.title }}</li>
+                            </ul>
+                        </td>
                     </tr>
                     <tr>
-                        <td>{{ details.plan }}</td>
+                        <td class="font-kanit font-light text-[14px] text-[#656E7C] w-[320px] h-[30px] py-1 border-b border-[#EAEFF5]">แผน 1</td>
+                        <td class="font-kanit font-light text-[14px] text-[#656E7C] w-[320px] h-[30px] py-1 border-b border-[#EAEFF5]">แผน 2</td>
+                        <td class="font-kanit font-light text-[14px] text-[#656E7C] w-[320px] h-[30px] py-1 border-b border-[#EAEFF5]">แผน 3</td>
+                        <td class="font-kanit font-light text-[14px] text-[#656E7C] w-[320px] h-[30px] py-1 border-b border-[#EAEFF5]">แผน 4</td>
                     </tr>
+
                     <tr>
-                        <td>{{ details.plan }}</td>
+                        <td class="font-kanit">{{ details.plan['แผน 1']}}</td>
+                        <td class="font-kanit">{{ details.plan['แผน 2']}}</td>
+                        <td class="font-kanit">{{ details.plan['แผน 3']}}</td>
+                        <td class="font-kanit">{{ details.plan['แผน 4']}}</td>
                     </tr>
                 }
         </tbody>
