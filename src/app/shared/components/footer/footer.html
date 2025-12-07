@@ -1,15 +1,22 @@
-<div class="bg-[#F2F0F1] pt-20 pb-10">
-  <div>
+<footer class="bg-[#F2F0F1] pt-10 pb-10">
+  <div class="mb-10">
     <p class="text-center font-urbanist text-[32px] font-bold">Rider</p>
     <p class="font-kanit mt-2 text-center text-gray-600">
       เลขที่ 78/2-7 ชั้น 2-4 อาคารอิออนหลักสี่ถนนแจ้งวัฒนะ แขวงอนุสาวรีย์ <br />เขตบางเขน กรุงเทพฯ
       10220
     </p>
+    <div class="justify-center flex flex-wrap mt-5 gap-3">
+      @for(footer of FOOTER; track footer) {
+      <a [routerLink]="footer.link"
+        ><img [src]="footer.image" alt="Footer Icon" class="w-[28px] h-[28px]"
+      /></a>
+      }
+    </div>
   </div>
-  <hr class="border-gray-600 border-1 mt-3 mx-10" />
+  <hr class="border-gray-400 border-1 mt-3 mx-10" />
   <div>
-    <p class="text-center font-urbanist mt-3 text-gray-600">
+    <p class="text-center font-urbanist mt-10 text-gray-600">
       © 2024 Rider Insurance Broker Public Company Limited
     </p>
   </div>
-</div>
+</footer>
