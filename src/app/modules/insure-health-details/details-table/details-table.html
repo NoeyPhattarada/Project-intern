@@ -1,59 +1,65 @@
-    <div class="p-6">
-        <div class=" border border-[#EAEFF5] rounded-2xl overflow-hidden">
-        <table class="w-full">
-            <thead>
-                <tr>
-                    <th colspan="5" class="font-kanit font-medium text-base text-[#111315] text-left p-4 bg-white">
-                        ข้อตกลงคุ้มครองประกันภัยอุบัติเหตุส่วนบุคคล
-                    </th>
-                </tr>
-            </thead>
+<div class="p-6">
+  <div class="border border-[#EAEFF5] rounded-2xl overflow-hidden">
+    <table class="w-full">
+      <thead>
+        <tr>
+          <th
+            colspan="5"
+            class="font-kanit font-medium text-base text-[#111315] text-left p-4 bg-white"
+          >
+            ข้อตกลงคุ้มครองประกันภัยอุบัติเหตุส่วนบุคคล
+          </th>
+        </tr>
+      </thead>
 
-            <tbody>
-                <tr>
-                    <td colspan="4" class="bg-[#F2F4FF] p-4">
-                        <ul class="list-disc list-inside space-y-2">
-                            @for(cov of Coverage; track cov) {
-                                <li class="font-kanit font-light text-base text-[#1B2437]">
-                                    {{ cov.detail }}
-                                </li>
-                            }
-                        </ul>
-                    </td>
-                </tr>
+      <tbody>
+        <tr>
+          <td colspan="4" class="bg-[#F2F4FF] p-4">
+            <ul class="list-disc list-inside space-y-2">
+              @for(cov of Coverage; track cov) {
+              <li class="font-kanit font-light text-base text-[#1B2437]">
+                {{ cov.detail }}
+              </li>
+              }
+            </ul>
+          </td>
+        </tr>
 
-                <tr>
-                    <td colspan="4" class="font-kanit font-light text-base text-[#1B2437] p-4 bg-white">
-                        5. ผลประโยชน์เพิ่มเติม ค่ารักษาพยาบาล สำหรับการเข้ารักษาในโรงพยาบาล อันเนื่องมาจากอุบัติเหตุ
-                    </td>
-                </tr>
+        <tr>
+            <td colspan="4" class="font-kanit font-light text-base text-[#1B2437] p-4 bg-white">
+                5. ผลประโยชน์เพิ่มเติม ค่ารักษาพยาบาล สำหรับการเข้ารักษาในโรงพยาบาลอันเนื่องมาจากอุบัติเหตุ
+            </td>
+        </tr>
 
-                @for(details of DetailsRow; track details) {
-                    <tr>
-                        <td colspan="4" class="bg-[#F2F4FF] p-4">
-                            <ul class="list-disc list-inside">
-                                <li class="font-kanit font-light text-base text-[#1B2437]">
-                                    {{ details.title }}
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
+        @for(details of DetailsRow; track details) {
+        <tr>
+          <td colspan="4" class="bg-[#F2F4FF] p-4">
+            <ul class="list-disc list-inside">
+              <li class="font-kanit font-light text-base text-[#1B2437]">
+                {{ details.title }}
+              </li>
+            </ul>
+          </td>
+        </tr>
 
-                    <tr class="bg-white">
-                        <td class="font-kanit font-light text-sm text-[#656E7C] text-center py-2 border-b border-[#EAEFF5]">แผน 1</td>
-                        <td class="font-kanit font-light text-sm text-[#656E7C] text-center py-2 border-b border-[#EAEFF5]">แผน 2</td>
-                        <td class="font-kanit font-light text-sm text-[#656E7C] text-center py-2 border-b border-[#EAEFF5]">แผน 3</td>
-                        <td class="font-kanit font-light text-sm text-[#656E7C] text-center py-2 border-b border-[#EAEFF5]">แผน 4</td>
-                    </tr>
+        <tr class="bg-white col-span-4">
+        @for(plan of details.plan; track plan){
+            <td
+            class="font-kanit font-light text-sm text-[#656E7C] text-center py-2 border-b border-[#EAEFF5]">
+                แผน {{ $index + 1 }}
+            </td>
+        }
+        </tr>
 
-                    <tr class="bg-white">
-                        <td class="font-kanit font-light text-base text-[#1B2437] text-center py-2">{{ details.plan['แผน 1'] }}</td>
-                        <td class="font-kanit font-light text-base text-[#1B2437] text-center py-2">{{ details.plan['แผน 2'] }}</td>
-                        <td class="font-kanit font-light text-base text-[#1B2437] text-center py-2">{{ details.plan['แผน 3'] }}</td>
-                        <td class="font-kanit font-light text-base text-[#1B2437] text-center py-2">{{ details.plan['แผน 4'] }}</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+        <tr class="bg-white col-span-4">
+            @for(plan of details.plan; track plan){
+                <td class="font-kanit font-light text-base text-[#1B2437] text-center py-2">
+                    {{ plan }}
+                </td>
+            }
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>

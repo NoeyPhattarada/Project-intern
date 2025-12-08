@@ -28,21 +28,11 @@ const Coverage: CoverageItem[] = [
 const DetailsRow: DetailsRowItem[] = [
   {
     title: 'ค่ารักษาพยาบาลจากอุบัติเหตุ (สูงสุดไม่เกิน 365 วัน)',
-    plan: {
-      'แผน 1': 200,
-      'แผน 2': 600,
-      'แผน 3': 1000,
-      'แผน 4': 2000,
-    },
+    plan: [200, 600, 1000, 2000]
   },
   {
     title: 'ค่ารักษาพยาบาลผู้ป่วยนอก (สูงสุดไม่เกิน 15 วัน)',
-    plan: {
-      'แผน 1': 200,
-      'แผน 2': 600,
-      'แผน 3': 1000,
-      'แผน 4': 2000,
-    },
+    plan: [200, 600, 1000, 2000]
   },
 ];
 
@@ -50,14 +40,8 @@ interface CoverageItem {
   detail: string;
 }
 
-interface PlanItem {
-  'แผน 1' : number;
-  'แผน 2' : number;
-  'แผน 3' : number;
-  'แผน 4' : number;
-}
 
 interface DetailsRowItem {
   title: string;
-  plan: PlanItem;
+  plan: number[];
 }
