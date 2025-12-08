@@ -20,8 +20,7 @@
         }
         <span class="font-kanit text-sm mt-1 font-normal">{{ card.rating }}</span>
       </div>
-
-      <h3 class="font-kanit text-2xl font-normal mt-auto">{{ card.price }}{{ card.unit }}</h3>
+      <p class="font-kanit text-2xl font-normal mt-auto">{{ card.price | number:'1.0-0' }}.- {{ card.unit }}</p>
     </div>
     }
   </div>
