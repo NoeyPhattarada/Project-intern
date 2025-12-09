@@ -1,10 +1,17 @@
-<nav class="flex justify-center gap-10 items-center py-3 px-4 md:py-3">
+<nav class="flex justify-between md:justify-center gap-10 items-center py-3 px-4 md:py-3">
   <p class="font-urbanist text-[32px] font-black">Rider</p>
-  <ul class="flex gap-6 text-base">
+  <ul class="hidden md:flex md:gap-6 md:text-base">
     @for(nav of NAVBAR; track nav) {
     <li class="font-urbanist">
-      <a [routerLink]="nav.route">{{ nav.label}}</a>
+      <a [routerLink]="nav.route">{{ nav.label }}</a>
     </li>
+    <div class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
+      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownNvbarButton">
+        <li>
+          <a [routerLink]="nav.route">{{ nav.label }}</a>
+        </li>
+      </ul>
+    </div>
     }
   </ul>
   <img
