@@ -1,22 +1,35 @@
-<nav class="flex justify-between md:justify-center gap-10 items-center py-3 px-4 md:py-3">
+<nav class="relative flex justify-between md:justify-center gap-10 items-center py-3 px-4 md:py-3">
   <p class="font-urbanist text-[32px] font-black">Rider</p>
   <ul class="hidden md:flex md:gap-6 md:text-base">
     @for(nav of NAVBAR; track nav) {
     <li class="font-urbanist">
       <a [routerLink]="nav.route">{{ nav.label }}</a>
     </li>
-    <div class="z-10 hidden bg-neutral-primary-medium border border-default-medium rounded-base shadow-lg w-44">
-      <ul class="p-2 text-sm text-body font-medium" aria-labelledby="dropdownNvbarButton">
-        <li>
-          <a [routerLink]="nav.route">{{ nav.label }}</a>
-        </li>
-      </ul>
-    </div>
+    } 
+  </ul>
+  <div class="flex items-center gap-4">
+    <button (click)="toggleMenu()" class="md:hidden" aria-label="Toggle menu">
+      <lucide-icon [img]="isMenuOpen ? X : Menu" [size]="24" class="text-gray-700 hover:text-gray-900 transition-colors cursor-pointer"></lucide-icon>
+    </button>
+
+    <img src="assets/images/profile.svg" alt="Profile" class="w-6 h-6" />
+  </div>
+  <div 
+  class="absolute top-full left-0 w-full bg-white shadow-lg md:hidden transition-all duration-300"
+  [class.max-h-0]="!isMenuOpen"
+  [class.max-h-96]="isMenuOpen"
+  [class.overflow-hidden]="true">
+  <ul class="flex flex-col py-4">
+    @for(nav of NAVBAR; track nav) {
+    <li class="font-urbanist">
+      <a 
+        [routerLink]="nav.route" 
+        (click)="closeMenu()"
+        class="block px-4 py-3 hover:bg-gray-100 transition-colors">
+        {{ nav.label }}
+      </a>
+    </li>
     }
   </ul>
-  <img
-    src="assets/images/profile.svg"
-    alt=""
-    class="w-6 h-6"
-  />
+</div>
 </nav>
