@@ -1,6 +1,6 @@
-    <div class="flex flex-col p-6 mx-3 mt-5 md:mt-10 md:mx-100">
+    <div class="flex flex-col p-6 mx-3 mt-5 md:mt-10 md:mx-50">
         @for(card of CardDetail; track card) {
-        <div class="mx-auto my-2 bg-[#F2F0F1] w-full h-auto p-6 flex flex-row gap-2 rounded-2xl">
+        <div class="mx-auto my-2 bg-[#F2F0F1] w-full max-w-7xl h-auto p-6 flex flex-row gap-2 rounded-2xl">
             <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center shrink-0">
                 <img [src]="card.imageUrl" alt="" class="w-[30px] h-[30px]"> 
             </div>
