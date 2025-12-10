@@ -1,8 +1,8 @@
 <nav class="relative flex justify-between md:justify-center gap-10 items-center py-3 px-4 md:py-3">
-  <p class="font-urbanist text-[32px] font-black">Rider</p>
+  <p class="font-en text-[32px] font-black">Rider</p>
   <ul class="hidden md:flex md:gap-6 md:text-base">
     @for(nav of NAVBAR; track nav) {
-    <li class="font-urbanist">
+    <li class="font-en">
       <a [routerLink]="nav.route">{{ nav.label }}</a>
     </li>
     } 
@@ -20,7 +20,7 @@
   [class.overflow-hidden]="true">
   <ul class="flex flex-col py-4">
     @for(nav of NAVBAR; track nav) {
-    <li class="font-urbanist">
+    <li class="font-en">
       <a 
         [routerLink]="nav.route" 
         (click)="closeMenu()"
