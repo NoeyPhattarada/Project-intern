@@ -3,7 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
-@theme {
-  --font-urbanist: Urbanist, 'sans-serif';
-  --font-kanit: Kanit, 'sans-serif';
+@layer base {
+  body {
+    font-family: 'Urbanist', 'Kanit', sans-serif;
+  }
+}
+
+@layer utillities {
+  .font-th {
+    font-family: 'Kanit', sans-serif;
+  }
+
+  .font-en {
+    font-family: 'Urbanist', sans-serif;
+  }
+
+  .font-mixed {
+    font-family: 'Urbanist', 'Kanit', sans-serif;
+  }
 }
