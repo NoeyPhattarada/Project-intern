@@ -14,7 +14,7 @@ export class LandingPage {
   constructor() {
     // example get
     const params = new URLSearchParams(window.location.search);
-    this._landingPageService.getHelthCount(params.toString()).subscribe({
+    this._landingPageService.getHealthCount(params.toString()).subscribe({
       next: (res) => console.log(res),
       error: (err) => console.log(err),
     });
@@ -43,7 +43,7 @@ export class LandingPage {
       fillForm: {},
     };
 
-    this._landingPageService.postHelthCount(body).subscribe({
+    this._landingPageService.postHealthCount(body).subscribe({
       next: (res) => console.log(res),
       error: (err) => console.log(err),
     });
